@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/index', [
+    'uses' =>'SearchController@index',
+    'as' => 'search',
+]);
+
+Route::get('/', function () {
+    return view('search');
+});
+
+//Route::get('/index', [
+//    'uses' =>'SearchController@search',
+//    'as' => 'index',
+//]);
